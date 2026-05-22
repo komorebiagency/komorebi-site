@@ -1,0 +1,11 @@
+node_modules/
+.github/
+.git/
+*.toml
+*.md
+package.json
+package-lock.json
+.gitignore
+.assetsignore
+.DS_Store
+*.bak.html
