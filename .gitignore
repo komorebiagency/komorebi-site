@@ -1,0 +1,15 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Claude Code session data
+.claude/
+
+# Archivos de backup (solo para uso local)
+komorebi_18.bak.html
+
+# Archivos de preview de desarrollo
+preview_iconos.html
+preview_logo.html
+komorebilogoheader.svg
