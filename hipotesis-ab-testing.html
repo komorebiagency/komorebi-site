@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TP2H6CZ');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cómo definir buenas hipótesis de AB Testing | Komorebi Blog</title>
+<meta name="description" content="Cómo definir buenas hipótesis de AB Testing. Artículo del blog de Komorebi sobre marketing digital, lead generation y ventas digitales.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont/tabler-icons.min.css">
+<style>
+.post-wrap{max-width:780px;margin:0 auto;padding:4rem 2rem 6rem}
+.post-meta{display:flex;gap:1rem;align-items:center;margin-bottom:2.5rem;font-size:.85rem;color:var(--ink3)}
+.post-tag{background:var(--bg2);color:var(--ink2);padding:.25rem .75rem;border-radius:2rem;font-size:.8rem;font-weight:500}
+.post-h1{font-size:clamp(1.8rem,4vw,2.8rem);font-weight:300;line-height:1.2;margin-bottom:2rem;color:var(--ink)}
+.post-body p{margin-bottom:1.25rem;color:var(--ink2);line-height:1.75;font-size:1rem}
+.post-body h2{font-size:1.4rem;font-weight:400;margin:2.5rem 0 1rem;color:var(--ink)}
+.post-body ul,.post-body ol{margin:0 0 1.25rem 1.5rem;color:var(--ink2);line-height:1.75}
+.post-body li{margin-bottom:.4rem}
+.post-body strong{color:var(--ink);font-weight:500}
+.post-body img{max-width:100%;height:auto;border-radius:4px;margin:1.5rem 0}
+.post-body table{width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:.9rem}
+.post-body th,.post-body td{border:1px solid var(--sand);padding:.75rem;text-align:left}
+.post-body th{background:var(--bg2);font-weight:500}
+.post-body .wp-block-columns{display:flex;gap:2rem;margin-bottom:1.5rem;align-items:center}
+.post-body .wp-block-column{flex:1}
+.post-body figure{margin:1.5rem 0}
+.post-body figure img{max-width:100%}
+.post-back{display:inline-block;margin-bottom:2rem;color:var(--ink3);font-size:.9rem;text-decoration:none}
+.post-back:hover{color:var(--ink)}
+</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TP2H6CZ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<nav>
+  <div class="nav-logo"><a href="index.html"><img src="img/komorebi-logo.svg" alt="Komorebi" width="150" height="50" decoding="async"></a></div>
+  <ul class="nav-ul">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="servicios.html">Servicios de Agencia</a></li>
+    <li><a href="consultoria.html">Consultoría & CMO</a></li>
+    <li><a href="sobre.html">Sobre Komorebi</a></li>
+    <li><a href="blog.html" class="current">Blog</a></li>
+    <li><a href="contacto.html" class="nav-cta">Hablemos →</a></li>
+  </ul>
+</nav>
+
+<div class="post-wrap">
+  <a class="post-back" href="blog.html">← Volver al blog</a>
+  <div class="post-meta">
+    <span class="post-tag">AB Testing</span>
+    <span>22 de mayo de 2021</span>
+  </div>
+  <h1 class="post-h1">Cómo definir buenas hipótesis de AB Testing</h1>
+  <div class="post-body">
+<p>Alicia en el país de las maravillas, del famoso cuento de Lewis Carroll, pregunta al gato de Cheshire en algún momento qué camino debía tomar. Cheshire le contesta: “Eso depende mucho del lugar adonde quieras ir. Si no sabes dónde quieres ir, no importa qué camino sigas.” Sin saberlo, Cheshire, sentaba las bases del AB Testing</p>
+
+<p>Realizar un experimento sin una hipótesis es como tomar un camino al azar por el simple hecho de caminar, sin pensar hacia dónde dirigirnos y por qué. Inevitablemente terminaremos en algún lugar, pero existe la posibilidad de que no sea aquél que estábamos imaginando.</p>
+
+<p>La definición de una buena hipótesis es un paso clave para realizar experimentos exitosos. Aunque es posible configurar y ejecutar un experimento sin una hipótesis de optimización, no tendrá sentido si no tenes en claro que estás buscando aceptar o refutar.</p>
+
+<div style="height:63px" aria-hidden="true" class="wp-block-spacer"></div>
+
+<div class="wp-block-columns are-vertically-aligned-center">
+<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:33.33%">
+<div class="wp-block-image"><figure class="aligncenter size-large"><img src="https://komorebiagency.com/wp-content/uploads/2021/05/AB-Test-1.png" alt="Análisis de datos para AB Testing" class="wp-image-2540"/></figure></div>
+</div>
+
+<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:66.66%">
+<h2 class="alignwide">Definición de una hipótesis de AB Testing</h2>
+</div>
+</div>
+
+<p>Una hipótesis es una suposición hecha a partir de datos que se han recolectado y que sirve de base para iniciar una investigación o una argumentación. Se trata de un enunciado no verificado, que se intenta confirmar o refutar a través de un experimento. Al enunciar una hipótesis se establece claramente qué se está cambiando y cuál se cree que será el resultado. Ejecutar el experimento probará o refutará dicha hipótesis.</p>
+
+<div style="height:63px" aria-hidden="true" class="wp-block-spacer"></div>
+
+<h2>Componentes de una hipótesis</h2>
+
+<p>Al momento de investigar, redactar y documentar una hipótesis es necesario considerar que tiene tres partes:</p>
+
+<ul><li>La declaración: Si, entonces, porque ..."</li><li>La variable o resultado esperado</li><li>La justificación</li></ul>
+
+<div style="height:27px" aria-hidden="true" class="wp-block-spacer"></div>
+
+<div class="wp-block-columns are-vertically-aligned-center">
+<div class="wp-block-column is-vertically-aligned-center">
+<figure class="wp-block-image size-large is-resized"><img src="https://komorebiagency.com/wp-content/uploads/2021/05/hipotesis1-3.png" alt="" class="wp-image-2362" width="221" height="128"/></figure>
+</div>
+
+<div class="wp-block-column is-vertically-aligned-center">
+<figure class="wp-block-image size-large is-resized"><img src="https://komorebiagency.com/wp-content/uploads/2021/05/hipotesis2-3.png" alt="" class="wp-image-2363" width="206" height="127"/></figure>
+</div>
+
+<div class="wp-block-column is-vertically-aligned-center">
+<figure class="wp-block-image size-large is-resized"><img src="https://komorebiagency.com/wp-content/uploads/2021/05/hipotesis3-3.png" alt="" class="wp-image-2364" width="216" height="130"/></figure>
+</div>
+</div>
+
+<p><strong>La variable</strong></p>
+
+<p>Un elemento de sitio web o aplicación móvil que se puede modificar, agregar o eliminar para producir un resultado deseado. Es importante aislar y testear las variables de a una por vez para un test A / B / n, o un grupo de variables para una prueba multivariante.</p>
+
+<p>Por ejemplo, un sitio web tiene el formulario principal en la mitad de la home page. En este caso la variable para el experimento será la ubicación del formulario y el experimento consistirá en ubicarlo "above the fold."</p>
+
+<div style="height:27px" aria-hidden="true" class="wp-block-spacer"></div>
+
+<p><strong>El Resultado</strong></p>
+
+<p>El resultado previsto podría ser obtener más conversiones en la página de destino, clics o reproducciones de un video u otro KPI o métrica que estemos intentando afectar. Para decidir el resultado esperado se deben utilizar los datos que se tengan disponibles sobre el rendimiento actual del sitio y determinar cuál será el resultado ideal del experimento. Se trata esencialmente de establecer cual es la métrica de referencia a seguir y si el cambio producirá un efecto incremental o de gran escala.</p>
+
+<p>Siguiendo con nuestro ejemplo, en este caso el resultado esperado será el incremento de formularios completos.</p>
+
+<div style="height:27px" aria-hidden="true" class="wp-block-spacer"></div>
+
+<p><strong>Justificación</strong></p>
+
+<p>Se trata de demostrar que se ha establecido la hipótesis en base a investigación previa. ¿Con qué datos se cuenta acerca de los visitantes como consecuencia de la investigación cualitativa y cuantitativa que indique que la hipótesis es correcta? Para elaborar el fundamento resulta útil utilizar entrevistas con clientes, encuestas, mapas de calor, grabación de sesiones y demás.</p>
+
+<p>Finalizando con el ejemplo, la razón para probar que la publicación del formulario "above the fold" incrementará el volumen de formularios completos es que los visitantes raramente navegan hasta la mitad de la página o más allá.</p>
+
+<div style="height:63px" aria-hidden="true" class="wp-block-spacer"></div>
+
+<h2>¿Cuáles son los aprendizajes de una hipótesis sólida?</h2>
+
+<p>Una hipótesis de AB Testing investigada a fondo no garantiza una prueba ganadora. Lo que sí garantiza es una oportunidad de aprendizaje, sin importar el resultado (ganador, perdedor o experimento no concluyente).</p>
+
+<p>Si la hipótesis es correcta entonces ¡Felicitaciones! En cambio si es refutada no significa que se haya fracasado, en todo caso el resultado del experimento siempre brindará información interesante sobre la audiencia.</p>
+
+<p>En otras ocasiones tal vez se elaboró ​​una hipótesis basada en el "conocimiento cooperativo", o en un caso de estudio y se decidió replicarlo en una audiencia propia. La hipótesis se rechazó, pero el equipo aprendió que lo que funciona para otros sitios y aplicaciones no funciona para el propio. A no desanimarse! Es momento de elaborar una nueva hipótesis y descubrir propias mejores prácticas!</p>
+
+<div style="height:63px" aria-hidden="true" class="wp-block-spacer"></div>
+
+<h2>¿Cómo encajan las hipótesis en el flujo de trabajo de un experimento de AB Testing?</h2>
+
+<p>Una hipótesis es un componente clave de cada prueba y debe abordarse inmediatamente después de identificar los objetivos del experimento. La experimentación requiere de un proceso estructurado cuyos pasos son:</p>
+
+<ol><li>Definir objetivos y métricas clave</li><li>Crear distintas hipótesis de optimización</li><li>Estimar la duración de los tests y su tamaño de muestra representativo</li><li>Priorizar los experimentos en base al ROI esperado</li><li>QA del experimento</li><li>Lanzar prueba en vivo</li><li>Registrar y compartir resultados</li><li>Continuar con la hipótesis siguiente .</li></ol>
+
+<p>Los pasos 1 y 4 de este proceso son tan importantes como la creación de la hipótesis. Para ello es fundamental tener en cuenta que no todas las hipótesis son iguales. El equipo puede tener una idea interesante o puede haber un desacuerdo que está tratando de resolver, pero eso no significa que necesariamente sea lo más importante para probar.</p>
+
+<p>Priorizar y testear en función de las secciones del sitio o aplicación que tienen un alto potencial de impacto comercial (ingresos, participación o cualquier otro KPI que esté tratando de mejorar) es clave en este proceso. Es por ello que es necesario profundizar el análisis para identificar estas áreas y concentrarse en elaborar hipótesis que puedan apoyar mejoras en estas áreas.</p>
+
+<div style="height:63px" aria-hidden="true" class="wp-block-spacer"></div>
+
+<h2>Por último es importante recordar...</h2>
+
+<p><strong>Definir una hipótesis para cada resultado:</strong> buscar en cada experimento una oportunidad de aprendizaje pensando un paso por delante del experimento. ¿Qué se aprendería en caso de que la hipótesis sea aceptada o refutada?</p>
+
+<p><strong>Los datos son parte fundamental de este trabajo: </strong>nunca hay que realizar pruebas solo por probar. Cada visitante del sitio web es una oportunidad de aprendizaje, este es un recurso valioso que no debe desperdiciarse.</p>
+
+<p><strong>Asignar los resultados del experimento a un objetivo de alto nivel:</strong> Si se está haciendo un buen trabajo eligiendo pruebas basadas en datos y se las prioriza por impacto, este paso debería ser fácil. Asegurar que el experimento produzca un resultado significativo que ayude a hacer crecer el negocio, es en definitiva, el rector de la experimentación. ¿Cuáles son los objetivos y los KPI de la empresa? Si los experimentos e hipótesis están orientados a mejorar estas métricas, se podrá orientar al equipo para profundizar en los datos y desarrollar experimentos sólidos.</p>
+
+<p><strong>Documentar las hipótesis de AB Testing: </strong>Documentar todos los experimentos que son realizados ayuda a garantizar que las hipótesis históricas sirvan como referencia para experimentos futuros y brinden un foro para compartir el contexto de todas las pruebas, pasadas, presentes y futuras.</p>
+
+<p>Elaborar buenas hipótesis es una habilidad que se incorpora con el tiempo. Cuanto más se haga, mejores resultados obtendremos.</p>
+
+<p>&nbsp;</p>
+
+<div style="height:63px" aria-hidden="true" class="wp-block-spacer"></div>
+
+<p></p>
+  </div>
+</div>
+
+<section class="cta-band">
+  <h2 class="cta-band-h">¿Querés trabajar con nosotros?</h2>
+  <p class="cta-band-sub">Hablemos. Sin compromiso y sin PowerPoints genéricos.</p>
+  <a class="btn-white" href="contacto.html">Escribinos →</a>
+</section>
+
+<footer>
+  <div class="ft-logo"><a href="index.html"><img src="img/komorebi-logo.svg" alt="Komorebi" width="150" height="50" decoding="async"></a></div>
+  <div class="ft-links">
+    <a href="index.html">Home</a>
+    <a href="servicios.html">Servicios</a>
+    <a href="consultoria.html">Consultoría</a>
+    <a href="sobre.html">Sobre Komorebi</a>
+    <a href="blog.html">Blog</a>
+    <a href="contacto.html">Contacto</a>
+  </div>
+  <div class="ft-copy">© 2026 Komorebi · komorebiagency.com</div>
+</footer>
+</body>
+</html>
