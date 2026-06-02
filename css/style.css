@@ -278,6 +278,10 @@ footer{background:#0e0e09;padding:1.75rem 4rem;display:flex;justify-content:spac
   .btn-terra,.btn-ghost-w{width:100%;text-align:center;box-sizing:border-box}
 }
 
+/* HERO destacado de notas (banner) */
+.post-feat{max-width:100%;margin:0 auto 2.5rem;display:block}
+.post-feat img{width:100%;height:auto;border-radius:8px}
+
 /* SHARE (componente reutilizable de notas) */
 .share{display:flex;align-items:center;gap:.5rem;flex-wrap:wrap;margin:2rem 0}
 .share-label{font-size:.82rem;color:var(--ink3);font-weight:500;margin-right:.25rem}
