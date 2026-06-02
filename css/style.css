@@ -277,3 +277,14 @@ footer{background:#0e0e09;padding:1.75rem 4rem;display:flex;justify-content:spac
   .hero-btns{flex-direction:column;align-items:flex-start}
   .btn-terra,.btn-ghost-w{width:100%;text-align:center;box-sizing:border-box}
 }
+
+/* SHARE (componente reutilizable de notas) */
+.share{display:flex;align-items:center;gap:.5rem;flex-wrap:wrap;margin:2rem 0}
+.share-label{font-size:.82rem;color:var(--ink3);font-weight:500;margin-right:.25rem}
+.share-btn{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;padding:0;border:1px solid var(--sand);border-radius:50%;background:var(--white);color:var(--ink2);font-size:1.15rem;line-height:1;cursor:pointer;text-decoration:none;transition:background .18s,color .18s,border-color .18s}
+.share-btn:hover,.share-btn:focus-visible{background:var(--terra);border-color:var(--terra);color:#fff;outline:none}
+.share-btn.is-copied{background:var(--teal);border-color:var(--teal);color:#fff}
+.share-copy .ti-check{display:none}
+.share-copy.is-copied .ti-link{display:none}
+.share-copy.is-copied .ti-check{display:inline-flex}
+.share-status{font-size:.8rem;color:var(--teal);font-weight:500;min-height:1em}
