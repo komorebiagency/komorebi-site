@@ -9,3 +9,5 @@ package-lock.json
 .assetsignore
 .DS_Store
 *.bak.html
+worker/
+preview_*.html
